@@ -1,4 +1,4 @@
-# SeqSero2S 1.1.3
+# SeqSero2S
 
 Salmonella serotype prediction from genome sequencing data.
 
@@ -80,9 +80,6 @@ Raw reads k-mer workflow (originally SeqSeroK) depends on:
 (C) Genome assembly k-mer. This workflow takes genome assemblies as input and the rest of the workflow largely overlaps with the raw reads k-mer workflow
 
 # Installation
-### Conda
-```
-```
 ### Git
 Install mlst and stringMLST first
 ```

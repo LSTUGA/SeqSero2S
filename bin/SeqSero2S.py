@@ -15,7 +15,7 @@ from distutils.version import LooseVersion
 from distutils.spawn import find_executable
 sys.path.insert(1,sys.path[0]+'/..')
 
-__version__ = "1.1.3"
+__version__ = "1.1.4"
 
 ### SeqSero Kmer
 def parse_args():
@@ -1242,11 +1242,13 @@ def map_and_sort(threads,database,fnameA,fnameB,sam,bam,for_sai,rev_sai,sorted_b
 
 def extract_mapped_reads_and_do_assembly_and_blast(current_time,sorted_bam,combined_fq,mapped_fq1,mapped_fq2,threads,fnameA,fnameB,database,mapping_mode,phred_offset):
   #seqsero2 -a; extract, assembly and blast
-  subprocess.check_call("bamToFastq -i "+sorted_bam+" -fq "+combined_fq,shell=True)
+  #subprocess.check_call("bamToFastq -i "+sorted_bam+" -fq "+combined_fq,shell=True)
+  subprocess.check_call("samtools bam2fq "+sorted_bam+" > "+combined_fq+" 2>> data_log.txt",shell=True) ## change to samtools bam2fq. 202509
   #print("fnameA:",fnameA)
   #print("fnameB:",fnameB)
   if fnameB!="":
-    subprocess.check_call("bamToFastq -i "+sorted_bam+" -fq "+mapped_fq1+" -fq2 "+mapped_fq2 + " 2>> data_log.txt",shell=True)#2> /dev/null if want no output
+    #subprocess.check_call("bamToFastq -i "+sorted_bam+" -fq "+mapped_fq1+" -fq2 "+mapped_fq2 + " 2>> data_log.txt",shell=True)#2> /dev/null if want no output
+    subprocess.check_call("samtools bam2fq -1 "+mapped_fq1+" -2 "+mapped_fq2+" -0 /dev/null -s /dev/null -n "+sorted_bam+" 2>> data_log.txt",shell=True) ## change to samtools bam2fq. 202509
   else:
     pass
   outdir=current_time+"_temp"
@@ -1504,7 +1506,7 @@ def main():
           if ingore_header:
             pass
           else:
-            tsv_file.write("Sample name\tOutput directory\tInput files\tO antigen prediction\tH1 antigen prediction(fliC)\tH2 antigen prediction(fljB)\tPredicted identification\tPredicted antigenic profile\tPredicted serotype\tPredicted serotype (SeqSero2 v1.3.1)\tPotential inter-serotype contamination\tNote\tST\n")
+            tsv_file.write("Sample name\tOutput directory\tInput files\tO antigen prediction\tH1 antigen prediction(fliC)\tH2 antigen prediction(fljB)\tPredicted identification\tPredicted antigenic profile\tPredicted serotype\tPredicted serotype (SeqSero2 v1.3.2)\tPotential inter-serotype contamination\tNote\tST\n")
           if sample_name:
             new_file.write("Sample name:\t"+sample_name+"\n")
             tsv_file.write(sample_name+'\t')
@@ -1520,7 +1522,7 @@ def main():
                            "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                            "Predicted antigenic profile:\t"+predict_form+"\n"+
                            "Predicted serotype:\t"+predict_sero+"\n"+
-                           "Predicted serotype (SeqSero2 v1.3.1):\t"+predict_sero_ss2+"\n"+
+                           "Predicted serotype (SeqSero2 v1.3.2):\t"+predict_sero_ss2+"\n"+
                            note+contamination_report+star_line+claim+antigen_note+"\n")#+##
             tsv_file.write(make_dir+"\t"+" ".join(input_file)+"\t"+O_choice+"\t"+fliC_choice+"\t"+fljB_choice+"\t"+subspecies_ID_dir[ssp_pointer]+"\t"+predict_form+"\t"+predict_sero+"\t"+predict_sero_ss2+"\t"+conta_note+"\t"+contamination_report+star_line+claim+antigen_note+"\t"+st+"\n")
           else:
@@ -1532,7 +1534,7 @@ def main():
                            "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                            "Predicted antigenic profile:\t"+predict_form+"\n"+
                            "Predicted serotype:\t"+subspecies+' '+predict_form+"\n"+ # add serotype output for "N/A" prediction, add subspecies
-                           "Predicted serotype (SeqSero2 v1.3.1):\t"+subspecies+' '+predict_form_ss2+"\n"+
+                           "Predicted serotype (SeqSero2 v1.3.2):\t"+subspecies+' '+predict_form_ss2+"\n"+
                            note+NA_note+contamination_report+star_line+claim+antigen_note+"\n")#+##
             tsv_file.write(make_dir+"\t"+" ".join(input_file)+"\t"+O_choice+"\t"+fliC_choice+"\t"+fljB_choice+"\t"+subspecies_ID_dir[ssp_pointer]+"\t"+predict_form+"\t"+subspecies+' '+predict_form+"\t"+subspecies+' '+predict_form_ss2+"\t"+conta_note+"\t"+NA_note+contamination_report+star_line+claim+antigen_note+"\t"+st+"\n")
           ##MLST
@@ -1551,7 +1553,7 @@ def main():
                 "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                 "Predicted antigenic profile:\t"+predict_form+"\n"+
                 "Predicted serotype:\t"+predict_sero+"\n"+
-                "Predicted serotype (SeqSero2 v1.3.1):\t"+predict_sero_ss2+"\n"+
+                "Predicted serotype (SeqSero2 v1.3.2):\t"+predict_sero_ss2+"\n"+
                 note+contamination_report+star_line+claim+antigen_note+"\n")#+##
         else:
           print("Output directory:\t"+make_dir+"\n"+
@@ -1562,7 +1564,7 @@ def main():
                 "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                 "Predicted antigenic profile:\t"+predict_form+"\n"+
                 "Predicted serotype:\t"+subspecies+' '+predict_form+"\n"+ # add serotype output for "N/A" prediction, subspecies
-                "Predicted serotype (SeqSero2 v1.3.1):\t"+subspecies+' '+predict_form_ss2+"\n"+
+                "Predicted serotype (SeqSero2 v1.3.2):\t"+subspecies+' '+predict_form_ss2+"\n"+
                 note+NA_note+contamination_report+star_line+claim+antigen_note+"\n")
         ###MLST
         print("Sequence type: "+st)
@@ -1649,7 +1651,7 @@ def main():
         if ingore_header:
           pass
         else:
-          tsv_file.write("Sample name\tOutput directory\tInput files\tO antigen prediction\tH1 antigen prediction(fliC)\tH2 antigen prediction(fljB)\tPredicted identification\tPredicted antigenic profile\tPredicted serotype\tPredicted serotype (SeqSero2 v1.3.1)\tNote\tST\n")
+          tsv_file.write("Sample name\tOutput directory\tInput files\tO antigen prediction\tH1 antigen prediction(fliC)\tH2 antigen prediction(fljB)\tPredicted identification\tPredicted antigenic profile\tPredicted serotype\tPredicted serotype (SeqSero2 v1.3.2)\tNote\tST\n")
         if sample_name: 
           new_file.write("Sample name:\t"+sample_name+"\n")
           tsv_file.write(sample_name+'\t')
@@ -1665,7 +1667,7 @@ def main():
                          "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                          "Predicted antigenic profile:\t"+predict_form+"\n"+
                          "Predicted serotype:\t"+predict_sero+"\n"+
-                         "Predicted serotype (SeqSero2 v1.3.1):\t"+predict_sero_ss2+"\n"+
+                         "Predicted serotype (SeqSero2 v1.3.2):\t"+predict_sero_ss2+"\n"+
                          note+star_line+claim+antigen_note+"\n")#+##
           tsv_file.write(make_dir+"\t"+input_file+"\t"+O_choice+"\t"+highest_fliC+"\t"+highest_fljB+"\t"+subspecies_ID_dir[ssp_pointer]+"\t"+predict_form+"\t"+predict_sero+"\t"+predict_sero_ss2+"\t"+star_line+claim+antigen_note+"\t"+st+"\n")
         else:
@@ -1677,7 +1679,7 @@ def main():
                          "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
                          "Predicted antigenic profile:\t"+predict_form+"\n"+
                          "Predicted serotype:\t"+subspecies+' '+predict_form+"\n"+ # add serotype output for "N/A" prediction, subspecies
-                         "Predicted serotype (SeqSero2 v1.3.1):\t"+subspecies+' '+predict_form_ss2+"\n"+
+                         "Predicted serotype (SeqSero2 v1.3.2):\t"+subspecies+' '+predict_form_ss2+"\n"+
                          note+NA_note+star_line+claim+antigen_note+"\n")#+##
           tsv_file.write(make_dir+"\t"+input_file+"\t"+O_choice+"\t"+highest_fliC+"\t"+highest_fljB+"\t"+subspecies_ID_dir[ssp_pointer]+"\t"+predict_form+"\t"+subspecies+' '+predict_form+"\t"+subspecies+' '+predict_form_ss2+"\t"+NA_note+star_line+claim+antigen_note+"\t"+st+"\n")
         ###MLST
@@ -1696,7 +1698,7 @@ def main():
               "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
               "Predicted antigenic profile:\t"+predict_form+"\n"+
               "Predicted serotype:\t"+predict_sero+"\n"+
-              "Predicted serotype (SeqSero2 v1.3.1):\t"+predict_sero_ss2+"\n"+
+              "Predicted serotype (SeqSero2 v1.3.2):\t"+predict_sero_ss2+"\n"+
               note+star_line+claim+antigen_note+"\n")#+##
       else:
         print("Output directory:\t"+make_dir+"\n"+
@@ -1707,7 +1709,7 @@ def main():
               "Predicted identification:\t"+subspecies_ID_dir[ssp_pointer]+"\n"+
               "Predicted antigenic profile:\t"+predict_form+"\n"+
               "Predicted serotype:\t"+subspecies+' '+predict_form+"\n"+ # add serotype output for "N/A" prediction, subspecies
-              "Predicted serotype (SeqSero2 v1.3.1):\t"+subspecies+' '+predict_form_ss2+"\n"+
+              "Predicted serotype (SeqSero2 v1.3.2):\t"+subspecies+' '+predict_form_ss2+"\n"+
               note+NA_note+star_line+claim+antigen_note+"\n")#+##
       ###MLST
       print("Sequence type: "+st)
