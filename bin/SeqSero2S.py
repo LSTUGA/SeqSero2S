@@ -79,9 +79,9 @@ def mlst(assembly):
 
 def stringmlst(f1,f2,t,d):
     if t in ['1','2']:
-      subprocess.check_call("stringMLST.py --predict -P "+d+"/kmer/salmonella -1 "+f1+" -2 "+f2+" -o stringMLST.txt >> data_log.txt 2>&1",shell=True)
+      subprocess.check_call("stringMLST.py --predict -P "+d+"/kmer/salmonella -1 "+f1+" -2 "+f2+" -a /dev/stdout -o stringMLST.txt >> data_log.txt 2>&1",shell=True)
     elif t=='3':
-      subprocess.check_call("stringMLST.py --predict -P "+d+"/kmer/salmonella -1 "+f1+" -s -o stringMLST.txt >> data_log.txt 2>&1",shell=True)
+      subprocess.check_call("stringMLST.py --predict -P "+d+"/kmer/salmonella -1 "+f1+" -s -a /dev/stdout -o stringMLST.txt >> data_log.txt 2>&1",shell=True)
     f = "stringMLST.txt"
     mlst_result = open(f).readlines()[1].strip().split('\t')
     st = mlst_result[-1]
