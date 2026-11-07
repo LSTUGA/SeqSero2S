@@ -1,0 +1,15 @@
+# Evidence format
+
+These files are compact exports of executed local validation. Raw reads, assemblies, temporary run directories, machine package inventories and full downloaded web pages are not included. No sample was dropped because its prediction disagreed with a label.
+
+- `software_cases.tsv` lists 70 historical genuine-tool cases; its columns are defined in `software_case_columns.md`. The corresponding complete normalized JSON records are in `software_workflows.json`. Match by round, serotype and variant. Output paths identify local run products, which are not committed.
+- `software_summary.json` is the historical summary, including known incomplete Braenderup calls and exact source hashes. Its reference-integrity statement applies to that earlier stage, before the subsequent authorized marker-panel update.
+- `paratyphi_b_sample_scores.tsv` lists all 18 before/after read-library comparisons; its columns are defined in `paratyphi_b_score_columns.md`.
+- `paratyphi_b_workflows.json` contains all 51 final-code cohort cases. Each object has case key, mode (`k` or `a`), run, BioSample, optional matched assembly, exact arguments/command, elapsed seconds, exit status, source SHA-256, report fields, grouped maximum marker scores, and individual probe scores. K-mer scores are overlap percentages; microassembly scores are alignment identity fractions. They have different units and should not be compared directly.
+- `paratyphi_b_controls.json` uses the same schema for two genuine study-listed negative-marker controls in both modes.
+- `paratyphi_b_summary.json` includes the full 66-genuine-case final validation totals, including nine earlier-serotype checks and two installed-command checks. Five synthetic CLI controls and 28 regression tests are counted separately. Unresolved MLST exceptions are retained.
+- `sample_manifest.json` records public accession linkage, source URLs, complete read-pair/base counts and acquisition checksums for the original three-serotype samples, all 18 issue-linked libraries, available BioSample-matched assemblies and two negative controls. An assembly without a public download path remains recorded as unavailable. Eighteen libraries correspond to 16 EnteroBase uberstrain identifiers and are not all independent isolates.
+
+Only local path prefixes in the copied evidence were normalized: `${REPO}` denotes the repository root and `${CONDA_PREFIX}` denotes the native seqsero environment used for execution. These are placeholders, not literal shell arguments used in the original runs. Input paths under the former validation cache identify how downloaded inputs were arranged; users can choose other paths when replaying the CLI. Missing assembly fields in the exported comparison TSV use `NA` instead of empty trailing fields; the column definitions describe this notation. Source/report values and recorded outcomes are otherwise unchanged.
+
+For interpretation, acquisition limits, runtime versions and replay commands, see [the validation report](../VALIDATION.md).

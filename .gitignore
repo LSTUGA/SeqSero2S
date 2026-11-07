@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Downloaded real-data validation inputs and bulky run products
+validation/ncbi_real_data_20261106/data/
+validation/ncbi_real_data_20261106/runs/
+.DS_Store
+validation/issue6_st28_20261106/data/
+validation/issue6_st28_20261106/runs/
+validation/issue6_st28_20261106/fix/runs/
+validation/issue6_st28_20261106/fix/runs_initial/

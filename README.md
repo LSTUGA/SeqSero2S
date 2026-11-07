@@ -57,8 +57,8 @@ SeqSero2S has three workflows:
 
 Allele micro-assembly workflow depends on:
 
-1. Python 3;
-2. Biopython 1.73;
+1. Python >=3.8;
+2. Biopython >=1.73,<2;
 3. [Burrows-Wheeler Aligner v0.7.12](http://sourceforge.net/projects/bio-bwa/files/);
 4. [Samtools v1.8](http://sourceforge.net/projects/samtools/files/samtools/);
 5. [NCBI BLAST v2.2.28+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download);
@@ -72,7 +72,7 @@ Allele micro-assembly workflow depends on:
 
 Raw reads k-mer workflow (originally SeqSeroK) depends on:
 
-1. Python 3;
+1. Python >=3.8;
 2. [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software) (optional, just used to fastq-dump sra files);
 3. [mlst v2.22.1](https://github.com/tseemann/mlst).
 
@@ -110,7 +110,7 @@ Make sure all SeqSero2S and its dependency executables are added to your path (e
 
     -b <string> (algorithms for bwa mapping for allele mode; 'mem' for mem, 'sam' for samse/sampe; default=mem; optional; for now we only optimized for default "mem" mode)
  
-    -d <string> (output directory name, if not set, the output directory would be 'SeqSero_result_'+time stamp+one random number)
+    -d <string> (new output directory name; existing directories are rejected, if not set, the output directory would be 'SeqSero_result_'+time stamp+one random number)
 	
     -c <flag> (if '-c' was flagged, SeqSero2S will only output serotype prediction without the directory containing log files)
     
@@ -140,6 +140,47 @@ K-mer mode:
 # Output 
 Upon executing the command, a directory named 'SeqSero_result_Time_your_run' will be created. Your result will be stored in 'SeqSero_result.txt' in that directory. And the assembled alleles can also be found in the directory if using "-m a" (allele mode).
 
+
+# Software checks
+
+Run the software regression suite from the repository root:
+
+```sh
+python3 -m unittest discover -s tests -v
+```
+
+These tests cover argument validation, filenames containing spaces and shell
+characters, protection of existing output files, FASTQ streaming and splitting,
+external command construction, and a k-mer CLI smoke test using the bundled
+database. External MLST tools are stubbed; the suite does not validate biological
+accuracy or replace an integration run with the scientific dependencies.
+
+`--check` returns a nonzero exit status if any listed dependency is missing.
+Each run requires a new output directory, including runs with `-c`, to protect
+existing files from temporary-file cleanup. Paired inputs must have distinct
+basenames. Input filenames must not match the database or fixed output filenames
+such as `data_log.txt` and `SeqSero_result.tsv`.
+
+The GitHub Actions workflow is configured to run tests on Python 3.8, 3.11, 3.12, and
+3.13, builds source and wheel distributions, and checks the installed command and
+database files.
+
+Real-data integration validation is recorded in
+[the validation report](docs/VALIDATION.md), including
+complete public reads and matched assemblies, genuine nanopore controls,
+executed commands, source checksums, and retained prediction discrepancies.
+External assembly failures now return an error; temporary tool paths and
+stringMLST logs are isolated from user filenames and installed databases.
+Compressed assemblies and long-read FASTA/FASTQ are prepared before analysis.
+
+Paratyphi B marker comparison includes paired probes for the ST28 sequence
+context and uses the strongest score for each variant. Missing or tied marker
+evidence is reported as `Paratyphi B (tartrate variant unresolved)` with an
+explanatory note. MLST does not determine the variant. See the
+[marker provenance and decision rules](docs/PARATYPHI_B_MARKERS.md) and the
+[issue #6 correction validation](docs/VALIDATION.md#paratyphi-b-variant-correction).
+Assembly k-mer extraction includes the terminal sequence chunk so markers on
+short terminal contigs are fully scored.
 
 # Citation
 Zhang S, Den-Bakker HC, Li S, Dinsmore BA, Lane C, Lauer AC, Fields PI, Deng X. 

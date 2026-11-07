@@ -1,8 +1,10 @@
 include LICENSE
 include README.md
 include MANIFEST.in
-include version.py
 include setup.py
+include pyproject.toml
+recursive-include tests *.py
+recursive-include docs *.md *.json *.tsv
 include seqsero2s_db/antigens.pickle
 include seqsero2s_db/H_and_O_and_specific_genes.fasta
 include seqsero2s_db/invA_mers_dict

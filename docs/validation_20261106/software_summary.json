@@ -1,0 +1,76 @@
+{
+  "workflow_cases": 70,
+  "workflow_cases_passed": 70,
+  "by_group": {
+    "complete": 56,
+    "quality_encoding": 2,
+    "compressed_assemblies": 3,
+    "final_installed": 9
+  },
+  "prediction_invariance_checks": 63,
+  "prediction_invariance_passed": 63,
+  "header_count_checks_passed": 3,
+  "cli_contracts_passed": 9,
+  "utility_checks_passed": 3,
+  "unit_tests_passed": 20,
+  "primary_final_installed_metadata_agreement": {
+    "matched": 8,
+    "total": 9
+  },
+  "data_files_integrity_checked": 21,
+  "reference_files_integrity_checked": 17,
+  "source_sha256": "752c9a490e1930624ae4fa67159aa045e82f60d66c136e1dff4aa42d61a3fb3d",
+  "installed_script_sha256": "6d5bebb2eb652435c9586517d445f4fcbc458d2aa95bdaa0b779ee06f65ea239",
+  "installed_code_matches_checkout_except_shebang": true,
+  "biological_reference_files_match_repository": true,
+  "metadata_disagreements": [
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "complete",
+      "variant": "assembly_kmer",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    },
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "complete",
+      "variant": "single_allele_mem",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    },
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "complete",
+      "variant": "single_allele_sam",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    },
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "complete",
+      "variant": "special_assembly (space); [literal]",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    },
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "compressed_assemblies",
+      "variant": "compressed_assembly",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    },
+    {
+      "serotype": "Braenderup",
+      "role": "primary",
+      "round": "final_installed",
+      "variant": "assembly_kmer",
+      "prediction": "I -:e,h:e,n,z15",
+      "profile": "-:e,h:e,n,z15"
+    }
+  ]
+}
