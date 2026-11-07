@@ -1,0 +1,28 @@
+{
+  "cohort_read_libraries": 18,
+  "read_kmer_corrected": 18,
+  "assembly_kmer_corrected": 15,
+  "microassembly_variant_preserved": 18,
+  "cohort_genuine_workflows": 51,
+  "genuine_negative_control_workflows": 4,
+  "core_serotype_workflows_unchanged": 9,
+  "installed_genuine_workflows": 2,
+  "total_genuine_workflows": 66,
+  "synthetic_source_controls": 3,
+  "synthetic_installed_controls": 2,
+  "regression_tests": 28,
+  "existing_kmer_entries_unchanged": 377,
+  "database_entries": 379,
+  "input_files_unchanged": 55,
+  "MLST_exceptions_preserved": [
+    "ERR403700 reads unresolved in both modes",
+    "GCA_023215155.1 assembly unresolved"
+  ],
+  "source_sha256": "5c088c1d7c0807321a8cd4d82b531f04541273ea6f3f327d00cd14c2cab5517a",
+  "reference_hashes": {
+    "bin/SeqSero2S.py": "5c088c1d7c0807321a8cd4d82b531f04541273ea6f3f327d00cd14c2cab5517a",
+    "seqsero2s_db/H_and_O_and_specific_genes.fasta": "ba9db78e7448892e5ea62f4afb9e2b34a9ac00e0ea384a2fa0bf645e9ddad89c",
+    "seqsero2s_db/antigens.pickle": "ad53b93e4e9ea38b7fe164e2a5cf5c87f49318c951c09bd91d6fadc1eb1a6152"
+  },
+  "installed_script_sha256": "2804ddc1389c5b154d56171edc500b9038e94afed228243f28065fdefa6bffce"
+}

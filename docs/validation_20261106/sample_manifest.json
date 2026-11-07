@@ -1,0 +1,757 @@
+{
+  "source_workspace": "https://enterobase.warwick.ac.uk/species/senterica/search_strains?query=workspace:154095",
+  "study": "https://doi.org/10.1038/s41467-024-54418-4",
+  "three_serotype_samples": [
+    {
+      "serotype": "Oranienburg",
+      "run": "SRR41031109",
+      "biosample": "SAMN64008572",
+      "isolate": "FSIS12648017",
+      "assembly": "GCA_062021734.1",
+      "assembly_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/021/734/GCA_062021734.1_PDT003423168.1/GCA_062021734.1_PDT003423168.1_genomic.fna.gz",
+      "assembly_md5_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/021/734/GCA_062021734.1_PDT003423168.1/md5checksums.txt",
+      "spots": 1831441,
+      "bases": 518040988,
+      "sra_size_MB": "139",
+      "platform": "ILLUMINA",
+      "model": "MiSeq i100",
+      "layout": "PAIRED",
+      "sra_url": "https://www.ncbi.nlm.nih.gov/sra/SRR41031109",
+      "biosample_url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN64008572",
+      "assembly_record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_062021734.1/"
+    },
+    {
+      "serotype": "Braenderup",
+      "run": "SRR41491010",
+      "biosample": "SAMN64545369",
+      "isolate": "PNCS022411",
+      "assembly": "GCA_062075697.1",
+      "assembly_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/075/697/GCA_062075697.1_PDT003466871.1/GCA_062075697.1_PDT003466871.1_genomic.fna.gz",
+      "assembly_md5_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/075/697/GCA_062075697.1_PDT003466871.1/md5checksums.txt",
+      "spots": 827967,
+      "bases": 439685166,
+      "sra_size_MB": "224",
+      "platform": "ILLUMINA",
+      "model": "NextSeq 1000",
+      "layout": "PAIRED",
+      "sra_url": "https://www.ncbi.nlm.nih.gov/sra/SRR41491010",
+      "biosample_url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN64545369",
+      "assembly_record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_062075697.1/"
+    },
+    {
+      "serotype": "Cerro",
+      "run": "SRR41464335",
+      "biosample": "SAMN64519005",
+      "isolate": "SAL-26-VL-WA-NY-0003",
+      "assembly": "GCA_062070734.1",
+      "assembly_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/070/734/GCA_062070734.1_PDT003464823.1/GCA_062070734.1_PDT003464823.1_genomic.fna.gz",
+      "assembly_md5_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/070/734/GCA_062070734.1_PDT003464823.1/md5checksums.txt",
+      "spots": 1084762,
+      "bases": 618058344,
+      "sra_size_MB": "193",
+      "platform": "ILLUMINA",
+      "model": "NextSeq 1000",
+      "layout": "PAIRED",
+      "sra_url": "https://www.ncbi.nlm.nih.gov/sra/SRR41464335",
+      "biosample_url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN64519005",
+      "assembly_record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_062070734.1/"
+    }
+  ],
+  "issue6_read_libraries": [
+    {
+      "run": "ERR467034",
+      "biosample": "SAMEA2258627",
+      "strain": "02-9348",
+      "enterobase_id": 9379,
+      "uberstrain": 9379,
+      "read_pairs": 710518,
+      "bases_per_mate": [
+        71051800,
+        71051800
+      ],
+      "archive_sha256": "d6fbaa4e7b360a7899fca28f8974ec9a5e36fd49df2be5ddaf94025a2dfd1a17",
+      "files": [
+        {
+          "path": "data/ERR467034/ERR467034_1.fastq.gz",
+          "sha256": "bc824e1813d67e046b11eb36ee9f2e12f9e769083c772c18aa80a4ddd09079c4",
+          "sha256_uncompressed": "1fc93df06d5e38bc1c4049105552dd308a5babb156dfd642a82f7d4a2337dd6f",
+          "compressed_bytes": 59465444
+        },
+        {
+          "path": "data/ERR467034/ERR467034_2.fastq.gz",
+          "sha256": "1d0b8596ac705874863f6508a7abd99543df29ce70d8111cb6a4e9161debfb96",
+          "sha256_uncompressed": "91c48da242f02e5c943063d32a1c4560f85333d9b679d6708850840d9151be5a",
+          "compressed_bytes": 64066497
+        }
+      ]
+    },
+    {
+      "run": "ERR460136",
+      "biosample": "SAMEA2258626",
+      "strain": "01-0582",
+      "enterobase_id": 9582,
+      "uberstrain": 9582,
+      "read_pairs": 2185611,
+      "bases_per_mate": [
+        218561100,
+        218561100
+      ],
+      "archive_sha256": "25861982e16c271adf11ba532f025b97537cc1dfb6575ad0663cef1db6ee44e2",
+      "files": [
+        {
+          "path": "data/ERR460136/ERR460136_1.fastq.gz",
+          "sha256": "c9d25e33161065c666ad8aa735937bf26b9d82112abc0af0def88f35f0183b3e",
+          "sha256_uncompressed": "03f54df103f92a1aecd2e60d2b83781e6136542f5d35737cd81155b60813dcbc",
+          "compressed_bytes": 177333022
+        },
+        {
+          "path": "data/ERR460136/ERR460136_2.fastq.gz",
+          "sha256": "415fcf5f9ff751508231f8ec675475649ce76f8357ca9db6177316a351e768fa",
+          "sha256_uncompressed": "e279379cb23c634eff6e183431f5606c7a711cb52b96d3f41a1ede3d76b73c5a",
+          "compressed_bytes": 183859373
+        }
+      ]
+    },
+    {
+      "run": "ERR424902",
+      "biosample": "SAMEA2342567",
+      "strain": "01-03117",
+      "enterobase_id": 9670,
+      "uberstrain": 9670,
+      "read_pairs": 2641245,
+      "bases_per_mate": [
+        200734620,
+        200734620
+      ],
+      "archive_sha256": "4982ada54c204248bb15e6f29d5ab115cc178caca43961e9c94c2ae01c90ea30",
+      "files": [
+        {
+          "path": "data/ERR424902/ERR424902_1.fastq.gz",
+          "sha256": "db0c1d73439de8fc5b0ab84f3da2e72bf299aaebeb65808139a6bcc6fbb199bb",
+          "sha256_uncompressed": "08c3b87d4ec2c212e2087b42c2b3f4891157108db5189e31e48dd95dc4517968",
+          "compressed_bytes": 147655056
+        },
+        {
+          "path": "data/ERR424902/ERR424902_2.fastq.gz",
+          "sha256": "e2a6af4b7ed03f15cb56dd207eb1131eb305479934e75a6b67212401dd8923c6",
+          "sha256_uncompressed": "72d3bd1b8ebb02f44fe440fca9c1f4bb7b452ee23204a14100aadf0de863fc2d",
+          "compressed_bytes": 163301724
+        }
+      ]
+    },
+    {
+      "run": "ERR403711",
+      "biosample": "SAMEA2224127",
+      "strain": "2009-2080",
+      "enterobase_id": 9962,
+      "uberstrain": 9962,
+      "read_pairs": 730307,
+      "bases_per_mate": [
+        109546050,
+        109546050
+      ],
+      "archive_sha256": "2294e8bad1ac92ab14c1dc46df14462c639de38a7f39f4f08283c69710b607d4",
+      "files": [
+        {
+          "path": "data/ERR403711/ERR403711_1.fastq.gz",
+          "sha256": "5edfa8465171bf86baacac3f6020b05c8fe1d03440f6b07503caf8f509366a2e",
+          "sha256_uncompressed": "3bc93536c52910091b0e7a7ae40da1e44ed475bb9fb3478090bffa5fc1b8f697",
+          "compressed_bytes": 66319370
+        },
+        {
+          "path": "data/ERR403711/ERR403711_2.fastq.gz",
+          "sha256": "adc8f312ee7e8c0927080d2c5d296d5f3c1470d655aca1583f641e36b80fe7aa",
+          "sha256_uncompressed": "63f8cdf185a141b6e151d600ff9aa53ba0e9324ec776d0418409ef591a1c5198",
+          "compressed_bytes": 72276377
+        }
+      ]
+    },
+    {
+      "run": "ERR403710",
+      "biosample": "SAMEA2224126",
+      "strain": "dT+",
+      "enterobase_id": 9963,
+      "uberstrain": 9969,
+      "read_pairs": 694425,
+      "bases_per_mate": [
+        104163750,
+        104163750
+      ],
+      "archive_sha256": "9cb33ae24f1175123b8df170d36eb3cfd32cdd162bb9a8e76eb39332a24d4d8c",
+      "files": [
+        {
+          "path": "data/ERR403710/ERR403710_1.fastq.gz",
+          "sha256": "e674b0e72527adcf131641d9e5a3c7ab3de3e8fb7d893a4ad2b32901e56f39d5",
+          "sha256_uncompressed": "2350e931c23b349079df98230a6ed45fb6c67f539d67666083765359a20bc22a",
+          "compressed_bytes": 60516112
+        },
+        {
+          "path": "data/ERR403710/ERR403710_2.fastq.gz",
+          "sha256": "f1cf25c3acffe0b088c289acf0d81956847f1608c9417269640f85bd3adc008d",
+          "sha256_uncompressed": "d2bf268830f5fc6100e9968969748a8ab865fd0ebe12e92a2225d4754b263056",
+          "compressed_bytes": 66421492
+        }
+      ]
+    },
+    {
+      "run": "ERR403709",
+      "biosample": "SAMEA2224125",
+      "strain": "dT+",
+      "enterobase_id": 9964,
+      "uberstrain": 9968,
+      "read_pairs": 686488,
+      "bases_per_mate": [
+        102973200,
+        102973200
+      ],
+      "archive_sha256": "2570530437c9ba85d86c57d6d6dec9448ee7bb80c8615266c926514f4a9084cf",
+      "files": [
+        {
+          "path": "data/ERR403709/ERR403709_1.fastq.gz",
+          "sha256": "5f4f158dc46c72c33a6afcffefafae55acdceefccdac72588f42befdd0e13e2c",
+          "sha256_uncompressed": "25b315bc0043297c948d9c2e73450ad6893a521fd54299d7d07db6ac21e927a3",
+          "compressed_bytes": 61573237
+        },
+        {
+          "path": "data/ERR403709/ERR403709_2.fastq.gz",
+          "sha256": "e4f0bbdb603f829b5a3e3dda14a9ae58cd87a7b2a321c2f2879fa36caca8ee51",
+          "sha256_uncompressed": "34d8f1b8b83b25073167fe57f623e79e8b3d12fddfe6a004e0ddd1c01b77f29d",
+          "compressed_bytes": 68368836
+        }
+      ]
+    },
+    {
+      "run": "ERR403708",
+      "biosample": "SAMEA2224124",
+      "strain": "2010/14600",
+      "enterobase_id": 9965,
+      "uberstrain": 9965,
+      "read_pairs": 613053,
+      "bases_per_mate": [
+        91957950,
+        91957950
+      ],
+      "archive_sha256": "54fd81285ef7edcfebdcedd199ca36ece1ae70addff20c142de6acd1ed57c155",
+      "files": [
+        {
+          "path": "data/ERR403708/ERR403708_1.fastq.gz",
+          "sha256": "fc9243fe08ad8c26fbe38bc599b6ee65d23bd9932c999ef398a2989e5a1679eb",
+          "sha256_uncompressed": "4a3277337f1fd14ad807ce3bb59fd14ed1ac76d9eab008e205b747cbe322d3ab",
+          "compressed_bytes": 55150467
+        },
+        {
+          "path": "data/ERR403708/ERR403708_2.fastq.gz",
+          "sha256": "616080542ee68391adfbe0c062cb5d8db1bb17e0485dab6af057a52851b9ba90",
+          "sha256_uncompressed": "ad80d24af6b039e5a9b4057b62dab4551aaa22ec502b4bc8023926807d5bf9fd",
+          "compressed_bytes": 60929890
+        }
+      ]
+    },
+    {
+      "run": "ERR403707",
+      "biosample": "SAMEA2224123",
+      "strain": "2010/01382",
+      "enterobase_id": 9966,
+      "uberstrain": 9966,
+      "read_pairs": 952384,
+      "bases_per_mate": [
+        142857600,
+        142857600
+      ],
+      "archive_sha256": "256440c7c2f7c028fcc40dda02103cc05bba61e4b3c965d412e75a9fc881072e",
+      "files": [
+        {
+          "path": "data/ERR403707/ERR403707_1.fastq.gz",
+          "sha256": "b7e5eeea948e483425f0723d074a17d4ee5ba4a5e3e94478f6991abcb89a3b29",
+          "sha256_uncompressed": "95a725fe62c24bf1e453abd66cdc09c6cf15d3c20531e093cb70b1985d49aced",
+          "compressed_bytes": 83052287
+        },
+        {
+          "path": "data/ERR403707/ERR403707_2.fastq.gz",
+          "sha256": "c122cbd2f3cd62216700c857d3ab11c58a62d06a3d3dc0d3e276bfc99b61dd52",
+          "sha256_uncompressed": "8c975c25b849eaa10b81ef2eca4afbd62a869fdd6f955c529357726a4d4de34b",
+          "compressed_bytes": 92584300
+        }
+      ]
+    },
+    {
+      "run": "ERR403706",
+      "biosample": "SAMEA2224122",
+      "strain": "2010/00939",
+      "enterobase_id": 9967,
+      "uberstrain": 9967,
+      "read_pairs": 1148414,
+      "bases_per_mate": [
+        172262100,
+        172262100
+      ],
+      "archive_sha256": "72f46dc6b29b26c094a6b4e6229b97554ecdbfda1f4e11102cf1a4bdb743af79",
+      "files": [
+        {
+          "path": "data/ERR403706/ERR403706_1.fastq.gz",
+          "sha256": "605be2cfb075e487effeb667ee84b43864d30e5210131a29e5d74ed423301f22",
+          "sha256_uncompressed": "4c422e8a4dcc5ac3a7f1d5d1c26c4bc13870c59fdb8205e344dbca83ab9bb2fa",
+          "compressed_bytes": 103010490
+        },
+        {
+          "path": "data/ERR403706/ERR403706_2.fastq.gz",
+          "sha256": "471759bff5523666189bb59f39ba83015779395d1293fb0d172ae79ca38799ea",
+          "sha256_uncompressed": "632e1fb6d3058a8dba0303a63dd26c44c4313926e52b817243d28bfcea1a371f",
+          "compressed_bytes": 117051509
+        }
+      ]
+    },
+    {
+      "run": "ERR403705",
+      "biosample": "SAMEA2224121",
+      "strain": "2010/02245",
+      "enterobase_id": 9968,
+      "uberstrain": 9968,
+      "read_pairs": 625149,
+      "bases_per_mate": [
+        93772350,
+        93772350
+      ],
+      "archive_sha256": "ad1d1e7a427827f04bc7fb3e2dbf6c07cc849fd663832603435783a27b246a25",
+      "files": [
+        {
+          "path": "data/ERR403705/ERR403705_1.fastq.gz",
+          "sha256": "95218689eff4d4cf407d2659c4ea6de86f8a394ebfe6fe8f09ba03983080b7ad",
+          "sha256_uncompressed": "0cddd0bc84bf68cdfbb3b6d6037e1686580a261632a088e533a14ac0832584f3",
+          "compressed_bytes": 55358777
+        },
+        {
+          "path": "data/ERR403705/ERR403705_2.fastq.gz",
+          "sha256": "1c575cb6563c33c8ab70d22f990a99a3b22b86f96a8e89dcc015643e7dd9c355",
+          "sha256_uncompressed": "6959c4c66098dbb21c1c5f79778c3a1978de39ad985080909c1ad5e3489d9bea",
+          "compressed_bytes": 60837178
+        }
+      ]
+    },
+    {
+      "run": "ERR403704",
+      "biosample": "SAMEA2224120",
+      "strain": "2010/13583",
+      "enterobase_id": 9969,
+      "uberstrain": 9969,
+      "read_pairs": 862797,
+      "bases_per_mate": [
+        129419550,
+        129419550
+      ],
+      "archive_sha256": "074a83e20e429000827ebda17528ccc7695edcafae4024a2c8619d101715e771",
+      "files": [
+        {
+          "path": "data/ERR403704/ERR403704_1.fastq.gz",
+          "sha256": "108adf0edf7c6710fa734951bb86d97b200933e371c514e8b8f366792eabd383",
+          "sha256_uncompressed": "0089e501fbd95662b510b86110db79debc4d009ac3dfe76788bf2e007ce3018a",
+          "compressed_bytes": 74984923
+        },
+        {
+          "path": "data/ERR403704/ERR403704_2.fastq.gz",
+          "sha256": "ed4c4d830ce8f109b0e9d3a53afc06c550f6f7e8ce3756eb6d063115f1d4e2c0",
+          "sha256_uncompressed": "abece2314669985c6c7164810d9f6bec5b996479ef9d49d0f65b9b6960fc8b5e",
+          "compressed_bytes": 85288954
+        }
+      ]
+    },
+    {
+      "run": "ERR403703",
+      "biosample": "SAMEA2224119",
+      "strain": "2010/13556",
+      "enterobase_id": 9970,
+      "uberstrain": 9970,
+      "read_pairs": 731277,
+      "bases_per_mate": [
+        109691550,
+        109691550
+      ],
+      "archive_sha256": "3b4b5c34437f9f212e90bd4fcaaa5b378d2e4176f5132568b3aa47e731ff27c7",
+      "files": [
+        {
+          "path": "data/ERR403703/ERR403703_1.fastq.gz",
+          "sha256": "a1aa12a87cfdd81eb06968562e4d1bda67002ce265eed968b7a1524b463850a2",
+          "sha256_uncompressed": "f835664b27280c0eaae58a7a2699648a86a033ea8579dd66cc6d2e3000eaf92e",
+          "compressed_bytes": 64745154
+        },
+        {
+          "path": "data/ERR403703/ERR403703_2.fastq.gz",
+          "sha256": "1a718996a0c658e9901795bdbc5a052b3e80ecf3dcafe4700cfd623af1864554",
+          "sha256_uncompressed": "9d6bdedef4f182a12936db88d17e50fa3bbbdcb0f9d1e8868fb7763a93d60753",
+          "compressed_bytes": 72261415
+        }
+      ]
+    },
+    {
+      "run": "ERR403702",
+      "biosample": "SAMEA2224118",
+      "strain": "2010/01627",
+      "enterobase_id": 9971,
+      "uberstrain": 9971,
+      "read_pairs": 730348,
+      "bases_per_mate": [
+        109552200,
+        109552200
+      ],
+      "archive_sha256": "3deedaa305ef64d4e83caf1665cb46026e04e0301788a2ec659d24ddb487dd48",
+      "files": [
+        {
+          "path": "data/ERR403702/ERR403702_1.fastq.gz",
+          "sha256": "2add9d0337dbe1e2f2c0ed8b85b6bef2602f178aeaac2541299c1b52b7b4a77e",
+          "sha256_uncompressed": "0466883a63df2fdccd3566cae39c5e2a9fbf19d6eca28fc78867308689a24318",
+          "compressed_bytes": 65805113
+        },
+        {
+          "path": "data/ERR403702/ERR403702_2.fastq.gz",
+          "sha256": "6b27669d2fea3f66e26b9db00025b8e1d5bc938f866829744ba9fe9117d6963d",
+          "sha256_uncompressed": "aa2745c4754bd4f5d973b3e5947eb4f782e30f013aa244f5aa3123e00721306a",
+          "compressed_bytes": 72966129
+        }
+      ]
+    },
+    {
+      "run": "ERR403701",
+      "biosample": "SAMEA2224117",
+      "strain": "2010/12222b",
+      "enterobase_id": 9972,
+      "uberstrain": 9972,
+      "read_pairs": 883566,
+      "bases_per_mate": [
+        132534900,
+        132534900
+      ],
+      "archive_sha256": "d4693c3379656533acb675372ba4a8b197eea47d76fc32681f03249634b76410",
+      "files": [
+        {
+          "path": "data/ERR403701/ERR403701_1.fastq.gz",
+          "sha256": "b511fff55237296ff7a901ea7b4a67559904aebaae5fa0b421226e145858aee4",
+          "sha256_uncompressed": "b60397d4fda768be4c2fc394a34e6ab208526d09183674e094a6860ae826fbe3",
+          "compressed_bytes": 76590074
+        },
+        {
+          "path": "data/ERR403701/ERR403701_2.fastq.gz",
+          "sha256": "77448c3513665b83f34bdc8cfcd8f79534c1595ef65ea528889e41389b9884e8",
+          "sha256_uncompressed": "a58ad9c1bcb26c969feb83541ee6676c5cb5e1c6f3ef04eac9ac76922f23b707",
+          "compressed_bytes": 84126281
+        }
+      ]
+    },
+    {
+      "run": "ERR403700",
+      "biosample": "SAMEA2224116",
+      "strain": "2010/14896",
+      "enterobase_id": 9973,
+      "uberstrain": 9973,
+      "read_pairs": 741547,
+      "bases_per_mate": [
+        111232050,
+        111232050
+      ],
+      "archive_sha256": "c7d1885cab364408287f3fa3daad3af6c9e27c229840d7d44676ae234bc27c4d",
+      "files": [
+        {
+          "path": "data/ERR403700/ERR403700_1.fastq.gz",
+          "sha256": "248a42dcca564b972d428223532f4bc412a776e493281758ba9029d9a4442ac7",
+          "sha256_uncompressed": "b5f59f0af44b9949c6a5c2e703582d5b641e6fe401919edaf5e99d78d32bb332",
+          "compressed_bytes": 67788001
+        },
+        {
+          "path": "data/ERR403700/ERR403700_2.fastq.gz",
+          "sha256": "26e8b24c13e0b92b1f3ef25b2a63119b18fb7646f7a200c2b21ae455730a52ce",
+          "sha256_uncompressed": "70822bd29e5abc73b86dae4751ef2609027c5f7be0bb18d8fcc2376d064c8145",
+          "compressed_bytes": 74171091
+        }
+      ]
+    },
+    {
+      "run": "ERR403699",
+      "biosample": "SAMEA2224115",
+      "strain": "2010/12407",
+      "enterobase_id": 9974,
+      "uberstrain": 9974,
+      "read_pairs": 796392,
+      "bases_per_mate": [
+        119458800,
+        119458800
+      ],
+      "archive_sha256": "598f647ad2266dc3b600035ee2ac0b1348d8df5b98546ce95822818428e04491",
+      "files": [
+        {
+          "path": "data/ERR403699/ERR403699_1.fastq.gz",
+          "sha256": "f894bd3fd85bd7ed15cc8a21d2faac0bbcfbde6acdfea550dfb4afdf8ca29267",
+          "sha256_uncompressed": "9c82de440e1e5378236c9d7a45e769f593f796b0ae34811cdd1503110884e517",
+          "compressed_bytes": 69951518
+        },
+        {
+          "path": "data/ERR403699/ERR403699_2.fastq.gz",
+          "sha256": "bb5b3906fa4e84fce939d2aa44627a154e36b1ee8d4a0f3cc3f95e417c893530",
+          "sha256_uncompressed": "f8b937d7462071fd092c3f9278f1e4ebd76443c04c4940fe31e4a10945c1862a",
+          "compressed_bytes": 79023453
+        }
+      ]
+    },
+    {
+      "run": "ERR403698",
+      "biosample": "SAMEA2224114",
+      "strain": "2010/02257",
+      "enterobase_id": 9975,
+      "uberstrain": 9975,
+      "read_pairs": 940698,
+      "bases_per_mate": [
+        141104700,
+        141104700
+      ],
+      "archive_sha256": "780e2b336787cd9fa783aacb67d341596f686b15206e145273c073cc3e54845f",
+      "files": [
+        {
+          "path": "data/ERR403698/ERR403698_1.fastq.gz",
+          "sha256": "2acc188773fb3ad095410add9a46458353a9fcd3387c35695d11581dce0bdc23",
+          "sha256_uncompressed": "1faa5c260d6c944828740f277ab826ea1b726d0460405850523b07a208d7cb6a",
+          "compressed_bytes": 83448323
+        },
+        {
+          "path": "data/ERR403698/ERR403698_2.fastq.gz",
+          "sha256": "87d820275b336d68f9e8daff6cbc0a67e3ae3679ca5f8e9b96fc3fefb6749c4d",
+          "sha256_uncompressed": "26dc9e4ba4daeea34374a8b46821f70a8cb6dfe59363605ffb429fa4a7f62d59",
+          "compressed_bytes": 91573494
+        }
+      ]
+    },
+    {
+      "run": "ERR129861",
+      "biosample": "SAMEA1466415",
+      "strain": "11_PB_J",
+      "enterobase_id": 16945,
+      "uberstrain": 16945,
+      "read_pairs": 2987386,
+      "bases_per_mate": [
+        298738600,
+        298738600
+      ],
+      "archive_sha256": "6ce0b75fec98672699619f172482aa21e9188a134e3fe6dba34535f53788ee42",
+      "files": [
+        {
+          "path": "data/ERR129861/ERR129861_1.fastq.gz",
+          "sha256": "169866bd76e8fbca45d28675fd96d8038b43c2d345de50819c5f7adb1e8d0556",
+          "sha256_uncompressed": "9b8d358642a2bde8f3fd7be6e098937c8cc71b57bbf242ef2239743b3d0a66a3",
+          "compressed_bytes": 269292599
+        },
+        {
+          "path": "data/ERR129861/ERR129861_2.fastq.gz",
+          "sha256": "075fd522ffe3f129422ae3a595a2a7d9992256a6247712f395ee1de3b62c22ad",
+          "sha256_uncompressed": "d1b2f705b87a8c75c50060e407d3907bd7e69536445cde63d521143df78df220",
+          "compressed_bytes": 275993890
+        }
+      ]
+    }
+  ],
+  "issue6_assemblies": [
+    {
+      "assembly": "GCA_023463535.1",
+      "biosample": "SAMEA2224116",
+      "status": "no_public_ftp_path"
+    },
+    {
+      "assembly": "GCA_023216575.1",
+      "biosample": "SAMEA2258626",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/216/575/GCA_023216575.1_PDT001294993.7/GCA_023216575.1_PDT001294993.7_genomic.fna.gz",
+      "md5": "57661b192e73898d35ebf7b952774f5a",
+      "sha256": "40f92fa2abff8978fa63b7ab1907a7d02ad3b4525474b28dba32e722613f3073",
+      "path": "data/GCA_023216575.1/GCA_023216575.1.fna",
+      "sha256_plain": "5f29b2974ae8f1ecf763b41945c6cb54abc03f2d370a35220c0e139519a61814"
+    },
+    {
+      "assembly": "GCA_023215535.1",
+      "biosample": "SAMEA2224121",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/535/GCA_023215535.1_PDT001294976.7/GCA_023215535.1_PDT001294976.7_genomic.fna.gz",
+      "md5": "43b6748ef78513128d0b072a6af243d6",
+      "sha256": "ddaddbf10c53d9c19a81a53b8d71ed0fe134ad3dd2e8951b1076a42517747040",
+      "path": "data/GCA_023215535.1/GCA_023215535.1.fna",
+      "sha256_plain": "568810cdb2ca682be275fc1f39836778dad54986c035072bc358a43dcb230569"
+    },
+    {
+      "assembly": "GCA_023215495.1",
+      "biosample": "SAMEA2224126",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/495/GCA_023215495.1_PDT001294981.7/GCA_023215495.1_PDT001294981.7_genomic.fna.gz",
+      "md5": "19da3e3c86778475fa85ed8c09d72ccb",
+      "sha256": "5ce0d56c9fa7c47a0f3ed16f681d76fef9c9086532edf1145ce7f8c6ece31a3a",
+      "path": "data/GCA_023215495.1/GCA_023215495.1.fna",
+      "sha256_plain": "b64754c036ae1a4cd264ba5d0772a6947afda243d74fc3be877605c051da63aa"
+    },
+    {
+      "assembly": "GCA_023215375.1",
+      "biosample": "SAMEA2224119",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/375/GCA_023215375.1_PDT001294974.7/GCA_023215375.1_PDT001294974.7_genomic.fna.gz",
+      "md5": "0607205000edf83f88c393d64d4ec4dc",
+      "sha256": "252fcd6e5ec6a9105d9b6c0525a77f3823f376854b25934f7c9a71874bb3d4df",
+      "path": "data/GCA_023215375.1/GCA_023215375.1.fna",
+      "sha256_plain": "4110f4031508f27b8292c37c86a209dc56b2475569a52ae61463289bd359a201"
+    },
+    {
+      "assembly": "GCA_023215355.1",
+      "biosample": "SAMEA2224115",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/355/GCA_023215355.1_PDT001294970.7/GCA_023215355.1_PDT001294970.7_genomic.fna.gz",
+      "md5": "e60f69e0447ead4984071a6fffa3a238",
+      "sha256": "adc7a83a77ee2696595dad06cc375565dd4552a3ec68fd64c694accd12d7f6e2",
+      "path": "data/GCA_023215355.1/GCA_023215355.1.fna",
+      "sha256_plain": "b108b2de3df528b7ee6c8e7f8d695b164b3968616f828425a72104a5a4c44279"
+    },
+    {
+      "assembly": "GCA_023215295.1",
+      "biosample": "SAMEA2224120",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/295/GCA_023215295.1_PDT001294975.7/GCA_023215295.1_PDT001294975.7_genomic.fna.gz",
+      "md5": "dbd7ae0a657b6506907ba1b13acb90c2",
+      "sha256": "9522fb679f6a0e49217612dcc8ac878d3587d661385c187dbb9ed40f01ce25bd",
+      "path": "data/GCA_023215295.1/GCA_023215295.1.fna",
+      "sha256_plain": "6e7cb669e47799df0e49f0ae5c78e0f938560b36b38fc79dccca810a0caa5afb"
+    },
+    {
+      "assembly": "GCA_023215275.1",
+      "biosample": "SAMEA2224118",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/275/GCA_023215275.1_PDT001294973.7/GCA_023215275.1_PDT001294973.7_genomic.fna.gz",
+      "md5": "14fe8424325444386441c5651b3f54e0",
+      "sha256": "6902017bcf13ec3f58341343580edcaacf8d8b20ed2347b32e29eab814507a63",
+      "path": "data/GCA_023215275.1/GCA_023215275.1.fna",
+      "sha256_plain": "4cd46ebfa63e4ab6a1df9333687aa2f1c024a66fc897d524c9298f1ce3255f56"
+    },
+    {
+      "assembly": "GCA_023215235.1",
+      "biosample": "SAMEA2224122",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/235/GCA_023215235.1_PDT001294977.7/GCA_023215235.1_PDT001294977.7_genomic.fna.gz",
+      "md5": "79e5f16d80541feab7cb2a3c14638e3a",
+      "sha256": "3ffb7bfc5ac606086eee7c1845bb06fc4192a6d3804d9638e0bc5dec83d7db05",
+      "path": "data/GCA_023215235.1/GCA_023215235.1.fna",
+      "sha256_plain": "436cdede9c392a7312ec25df42514ebaffabdb84ed541358631f061da0c43e1d"
+    },
+    {
+      "assembly": "GCA_023215255.1",
+      "biosample": "SAMEA2224123",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/255/GCA_023215255.1_PDT001294978.7/GCA_023215255.1_PDT001294978.7_genomic.fna.gz",
+      "md5": "e6d84ffced14c839e1378f33c2832fc6",
+      "sha256": "2976cad15eaa0bea494e7ee910ea360a3a6fa2e6ca3cfecde70468a8dc13735c",
+      "path": "data/GCA_023215255.1/GCA_023215255.1.fna",
+      "sha256_plain": "9d82a2d19fa1bc022a9bf1014a603e88f8e8d17d29675be511b34484e5487bca"
+    },
+    {
+      "assembly": "GCA_023215215.1",
+      "biosample": "SAMEA2224127",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/215/GCA_023215215.1_PDT001294982.7/GCA_023215215.1_PDT001294982.7_genomic.fna.gz",
+      "md5": "1cd3ecdec07afc0eef3e89a50bfb80b2",
+      "sha256": "14678771d5463d9be182c684f7cd3c60c95ff47b82b5c7821a70d7139c162f87",
+      "path": "data/GCA_023215215.1/GCA_023215215.1.fna",
+      "sha256_plain": "776728a9a2614797be82782da4ff00213a8de415f738782eaf90197fafe003a7"
+    },
+    {
+      "assembly": "GCA_023215155.1",
+      "biosample": "SAMEA2258627",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/155/GCA_023215155.1_PDT001295032.7/GCA_023215155.1_PDT001295032.7_genomic.fna.gz",
+      "md5": "0e0fbc796a6e91200ad8a5e739321568",
+      "sha256": "48e25f543e1e8c259d23b96ef4307e844faf4796028efa5e3660d3cb326642d2",
+      "path": "data/GCA_023215155.1/GCA_023215155.1.fna",
+      "sha256_plain": "786628a18855cff325f9f701dd6581b93702ee4bb0be891db5016ec27c25ad6d"
+    },
+    {
+      "assembly": "GCA_023215175.1",
+      "biosample": "SAMEA2224125",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/215/175/GCA_023215175.1_PDT001294980.7/GCA_023215175.1_PDT001294980.7_genomic.fna.gz",
+      "md5": "294730a0e4d5b86f5b716f46188dc33d",
+      "sha256": "031b7405c1cfe4b6b52762fb5f378a56624dc4259f94935b61fdaf622b9d7b41",
+      "path": "data/GCA_023215175.1/GCA_023215175.1.fna",
+      "sha256_plain": "561c23517215aec7711b596d8c8385d00c0136cc661a3949dc2f6794ea4a6c96"
+    },
+    {
+      "assembly": "GCA_023214535.1",
+      "biosample": "SAMEA2224117",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/214/535/GCA_023214535.1_PDT001294972.7/GCA_023214535.1_PDT001294972.7_genomic.fna.gz",
+      "md5": "b7dc55d85af2d3007df425ff684e6e3c",
+      "sha256": "66f79e5e1e3f59dc8b65f6208aaf94494ebbcca5b38361be3a693bdb7067fbe7",
+      "path": "data/GCA_023214535.1/GCA_023214535.1.fna",
+      "sha256_plain": "87cb4b0cd61f8eb7023f11325a9bbb084c0ee27c066dbd3ae14775cd31e1fbb5"
+    },
+    {
+      "assembly": "GCA_023159755.1",
+      "biosample": "SAMEA2224124",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/159/755/GCA_023159755.1_PDT001294979.1/GCA_023159755.1_PDT001294979.1_genomic.fna.gz",
+      "md5": "183ffa1a63588380561cad56301cd9ef",
+      "sha256": "593e9b0d371fcf2ce2da95cc8d4c4aed6f6cf55bd90e304c0aefba83604b3278",
+      "path": "data/GCA_023159755.1/GCA_023159755.1.fna",
+      "sha256_plain": "9ddace920d8ab75c2b97d8b8eb5ec9df4aecd3519b5019dd723cf8939318f9be"
+    },
+    {
+      "assembly": "GCA_023159685.1",
+      "biosample": "SAMEA2224114",
+      "status": "downloaded",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/159/685/GCA_023159685.1_PDT001294969.1/GCA_023159685.1_PDT001294969.1_genomic.fna.gz",
+      "md5": "fe658b40ed1203c60527d3ff087fad26",
+      "sha256": "02cc8e81d08cb5ce2b4d5594824db61ab9fc25f7662e63ca7954bce478ce04e8",
+      "path": "data/GCA_023159685.1/GCA_023159685.1.fna",
+      "sha256_plain": "3542dffb00056ae278a138c89d085c3afd8ad37f7ecddd6267bef45ed1a60550"
+    }
+  ],
+  "negative_controls": [
+    {
+      "run": "SRR7522871",
+      "biosample": "SAMN09658606",
+      "strain": "NCTC 8299",
+      "published_ST": "5113",
+      "read_pairs": 1247261,
+      "bases_per_mate": [
+        123971254,
+        123973398
+      ],
+      "files": [
+        {
+          "path": "data/SRR7522871/SRR7522871_1.fastq.gz",
+          "sha256": "2c87f2a97d7ec1391666ddca085f87d6cc5ba2eb4ae1d3875d8015e965568589",
+          "sha256_uncompressed": "2df9ede1f97a9551594e38397f74ad581df11786897c8597c03471edda494cbe",
+          "compressed_bytes": 92512787
+        },
+        {
+          "path": "data/SRR7522871/SRR7522871_2.fastq.gz",
+          "sha256": "52454af338da32bcacc5bc2495ad758e7434741651c1de7aa60e31aa902e23a4",
+          "sha256_uncompressed": "bfd1d2ae80851f2da9b0567bd502f048e8598505ceb3d66e7eb8fd43c8e0de55",
+          "compressed_bytes": 98069774
+        }
+      ]
+    },
+    {
+      "run": "ERR12737465",
+      "biosample": "SAMEA115399013",
+      "strain": "173-73",
+      "published_ST": "86",
+      "read_pairs": 3767171,
+      "bases_per_mate": [
+        470896375,
+        470896375
+      ],
+      "files": [
+        {
+          "path": "data/ERR12737465/ERR12737465_1.fastq.gz",
+          "sha256": "f85e5dd51cc596d26f635860970ab542014df218e8574637c92875d03f7c49f9",
+          "sha256_uncompressed": "958204f9d9a5fd2bd4c58dc29d73a9625eea46f9766ae24e37556b4395cf5c92",
+          "compressed_bytes": 329185430
+        },
+        {
+          "path": "data/ERR12737465/ERR12737465_2.fastq.gz",
+          "sha256": "7228910e2dee40909172b1575ba5b1d870688ecf68f2ea4835b8986ad9e9ef66",
+          "sha256_uncompressed": "9b4c2e8a233d2cf59d8b610fdffaac6298112ccc80c1080a0f3ef392eb251e39",
+          "compressed_bytes": 332593707
+        }
+      ]
+    }
+  ]
+}
