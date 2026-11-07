@@ -7,7 +7,7 @@ def readme():
 
 setup(name='SeqSero2S',
     #version=open("version.py").readlines()[-1].split()[-1].strip("\"'"),
-    version='1.1.4',
+    version='1.2.1',
     description='Salmonella serotyping',
     long_description=readme(),
     long_description_content_type='text/markdown',

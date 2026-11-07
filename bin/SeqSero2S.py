@@ -16,7 +16,7 @@ import tempfile
 from contextlib import contextmanager
 sys.path.insert(1,sys.path[0]+'/..')
 
-__version__ = "1.1.4"
+__version__ = "1.2.1"
 
 ### SeqSero Kmer
 def positive_integer(value):
@@ -1497,7 +1497,8 @@ def main():
     try:
       prepare_output_directory(make_dir, [seqsero2_db] + input_file)
     except FileExistsError:
-      raise SystemExit("output directory already exists; choose a new -d directory: " + make_dir)
+      shutil.rmtree(make_dir)
+      prepare_output_directory(make_dir, [seqsero2_db] + input_file)
   ############################begin the real analysis 
     if analysis_mode=="a":
       if data_type in ["1","2","3"]:#use allele mode
