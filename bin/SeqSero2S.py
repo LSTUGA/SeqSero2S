@@ -1497,8 +1497,7 @@ def main():
     try:
       prepare_output_directory(make_dir, [seqsero2_db] + input_file)
     except FileExistsError:
-      shutil.rmtree(make_dir)
-      prepare_output_directory(make_dir, [seqsero2_db] + input_file)
+      raise SystemExit("output directory already exists; choose a new -d directory: " + make_dir)
   ############################begin the real analysis 
     if analysis_mode=="a":
       if data_type in ["1","2","3"]:#use allele mode
