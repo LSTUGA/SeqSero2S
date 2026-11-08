@@ -4,6 +4,24 @@ Salmonella serotype prediction from genome sequencing data.
 
 Online version: http://www.denglab.info/SeqSero2
 
+# Major updates
+
+## v1.3.0
+
+### Paratyphi B ST28 tartrate-variant classification
+
+Corrects the k-mer misclassification reported in [issue #58](https://github.com/denglab/SeqSero2/issues/58). Five sequence differences in the ST28 marker context prevented the original probes from providing discriminating 27-mer evidence. The updated reference includes a positive context probe recovered from public ST28 assemblies and a matched negative probe carrying the discriminating SNP. The negative context probe is a designed counterpart, not a naturally sampled ST28 tartrate-negative isolate.
+
+Both original and added probes are scored. The caller compares the strongest positive and strongest negative evidence; probe use does not require ST28 or MLST detection. Missing or tied evidence is reported as `Paratyphi B (tartrate variant unresolved)`.
+
+Validation included all 18 reported public read libraries (16 EnteroBase uberstrain identifiers) and 15 accessible matched assemblies. All 18 read k-mer and 15 assembly k-mer predictions changed from plain Paratyphi B to `Paratyphi B var. L(+) tartrate+`; all 18 patched microassembly cases were positive. Six non-ST28 controls spanning three positive contexts and three negative-marker variants retained their expected calls in both modes. These tests assess a defined cohort, not universal phenotype accuracy.
+
+### Installation and reporting
+
+- Replace shell command interpolation with literal subprocess arguments and Python filesystem operations; use simple temporary paths for SPAdes/BLAST and keep stringMLST logs in the run directory.
+- Modernize setuptools/PEP 517 packaging and remove distutils imports. The existing biopython~=1.73 requirement is unchanged; samtools bam2fq was also already present upstream.
+- Adds `SeqSero2_summarize.py` to combine TSV reports by column name.
+
 # Updates since SS2 v1.2.1
 1. Convert the sequences of the following alleles to their reverse complement sequences in the SeqSero2 database.
 ```
@@ -183,6 +201,10 @@ Assembly k-mer extraction includes the terminal sequence chunk so markers on
 short terminal contigs are fully scored.
 
 # Citation
+Deng X, Li S, Xu T, Zhou Z, Moore MM, Timme R, Zhao S, Lane C, Dinsmore BA, Weill F, Fields PI. 
+Salmonella serotypes in the genomic era: simplified Salmonella serotype interpretation from DNA sequence data. 
+**Appl Environ Microbiol. 2025 Mar 19;91(3):e0260024.** [PMID: 39992117](https://journals.asm.org/doi/10.1128/aem.02600-24).
+
 Zhang S, Den-Bakker HC, Li S, Dinsmore BA, Lane C, Lauer AC, Fields PI, Deng X. 
 SeqSero2: rapid and improved Salmonella serotype determination using whole genome sequencing data.
 **Appl Environ Microbiology. 2019 Sep; 85(23):e01746-19.** [PMID: 31540993](https://aem.asm.org/content/early/2019/09/17/AEM.01746-19.long) 
