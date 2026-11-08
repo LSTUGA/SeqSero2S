@@ -16,7 +16,7 @@ import tempfile
 from contextlib import contextmanager
 sys.path.insert(1,sys.path[0]+'/..')
 
-__version__ = "1.2.1"
+__version__ = "1.3.0"
 
 ### SeqSero Kmer
 def positive_integer(value):
